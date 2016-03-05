@@ -1,0 +1,7 @@
+/*.zip
+*.iws
+*.ipr
+*.iml
+.settings
+.project
+.idea
