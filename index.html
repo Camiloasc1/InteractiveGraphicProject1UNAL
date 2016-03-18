@@ -20,66 +20,7 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
-
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Observatorio de Monte Palomar</a>
-        </div>
-        <div class="collapse navbar-collapse" id="mainNavbar">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
-                <li class="dropdown">
-                    <a href="#" data-target="#" class="dropdown-toggle" data-toggle="dropdown">
-                        El Observatorio<span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="divider"></li>
-                        <li class="dropdown-header">Historia</li>
-                        <li><a href="historia.html">Historia del Observatorio</a></li>
-                        <li><a href="construccion.html">Construccion del Telescopio Hale</a></li>
-                        <li><a href="personalidades.html">Personalidades Importantes</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" data-target="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Telescopios<span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="divider"></li>
-                        <li class="dropdown-header">Telescopios en servicio</li>
-                        <li><a href="Hale.html">Telescopio Hale</a></li>
-                        <li><a href="SamuelOschin.html">Telescopio Samuel Oschin</a></li>
-                        <li><a href="60p.html">Telescopio de 60 pulgadas</a></li>
-                        <li class="divider"></li>
-                        <li class="dropdown-header">Telescopios fuera de servicio</li>
-                        <li><a href="18p.html">Schmidt de 18 pulgadas</a></li>
-                        <li><a href="PTI.html">Interferometro de Pruebas (PTI)</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" data-target="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Visita Virtual<span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="http://www.astro.caltech.edu/palomar/visitor/spanish.html">
-                            <i class="fa fa-external-link"></i> Pagina Oficial</a></li>
-                        <li><a href="http://www.astro.caltech.edu/palomar/visitor/virtualtour.html">
-                            <i class="fa fa-external-link"></i> Tour Virtual</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="sitemap.html"><i class="fa fa-sitemap"></i> Mapa del sitio</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<div id="navbar"></div>
 
 <div class="container">
     <h1>Observatorio de Monte Palomar</h1>
@@ -122,11 +63,7 @@
     <p>El Observatorio Palomar, situado el la cima del Monte Palomar en el condado de San Diego, California, es un centro de investigación astronómica administrado y operado por el Instituto de Tecnología de California (Caltech). El Observatorio posee tres telescopios de investigación activos: el Telescopio Hale de 200 pulgadas (5,1 metros), el Telescopio Samuel Oschin de 48 pulgadas (1,2 metros), y el telescopio de 60 pulgadas (1,5 metros). La investigación se lleva a cabo por una amplia comunidad de astrónomos de Caltech y otras instituciones asociadas nacionales e internacionales.</p>
 </div>
 
-<footer class="footer">
-    <div class="container">
-        <p class="text-muted">Camilo Andres Sanchez Cubillos - caasanchezcu@unal.edu.co</p>
-    </div>
-</footer>
+<div id="footer"></div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery-1.11.3.min.js"></script>
@@ -138,6 +75,12 @@
 <script src="js/ripples.min.js"></script>
 <script>
     $.material.init();
+</script>
+<script>
+    $(function(){
+        $("#navbar").load("_navbar.html");
+        $("#footer").load("_footer.html");
+    });
 </script>
 </body>
 </html>
